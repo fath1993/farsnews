@@ -1,12 +1,11 @@
 from django.db import models
-from django_jalali.db import models as jmodels
 
 
 class CustomLog(models.Model):
     description = models.TextField(default='no description', null=False, blank=True, verbose_name='توضیحات ')
     log_level = models.CharField(default='INFO', max_length=255, null=False, blank=False,
                                  verbose_name='سطح لوگ ')
-    created_at = jmodels.jDateTimeField(auto_now_add=True, verbose_name='زمان و تاریخ ایجاد')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='زمان و تاریخ ایجاد')
 
     def __str__(self):
         return self.description[:50]

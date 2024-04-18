@@ -1,0 +1,3 @@
+Scraper for farsnews.ir
+Economy section
+Year between 1401-1402
